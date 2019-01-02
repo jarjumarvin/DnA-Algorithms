@@ -1,6 +1,8 @@
 import graph.Graph;
 import graph.MSTGraph;
 import graph.PathFindingGraph;
+import search_sort.Search;
+import search_sort.Sort;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,23 +13,23 @@ public class Main {
     }
 
     static void searchAlgorithms() {
-        System.out.println("=========Search Algorithms=========");
+        System.out.println("=========search_sort.Search Algorithms=========");
         Search search = new Search();
         int[] list = search.getOrderedList(50);
         System.out.println("List: {0,....,49}");
-        System.out.println("Search Values: {12, 15, 13, 2, 9, 27, 54, 37}");
+        System.out.println("search_sort.Search Values: {12, 15, 13, 2, 9, 27, 54, 37}");
         int[] v = new int[] {12, 15, 13, 2, 9, 27, 54, 37};
-        System.out.println("-----------Linear Search-----------");
+        System.out.println("-----------Linear search_sort.Search-----------");
         for(int i : v) {
             System.out.print(search.linearSearch(list, i) + ", ");
         }
         System.out.println();
-        System.out.println("-----------Binary Search-----------");
+        System.out.println("-----------Binary search_sort.Search-----------");
         for(int i : v) {
             System.out.print(search.binarySearch(list, i) + ", ");
         }
         System.out.println();
-        System.out.println("--------Interpolation Search-------");
+        System.out.println("--------Interpolation search_sort.Search-------");
         for(int i : v) {
             System.out.print(search.interpolationSearch(list, i) + ", ");
         }
@@ -39,21 +41,21 @@ public class Main {
         System.out.println("========Sorting Algorithms=========");
         Sort sort = new Sort();
         System.out.println("Inputs: randomized arrays of length 20");
-        System.out.println("------------Bubble Sort------------");
+        System.out.println("------------Bubble search_sort.Sort------------");
         int[] bubble = sort.getRandomList();
         sort.bubbleSort(bubble);
         printArray(bubble);
-        System.out.println("-----------Selection Sort----------");
+        System.out.println("-----------Selection search_sort.Sort----------");
         int[] selection = sort.getRandomList();
         sort.selectionSort(selection);
         printArray(selection);
-        System.out.println("-----------Insertion Sort----------");
+        System.out.println("-----------Insertion search_sort.Sort----------");
         int[] insertion = sort.getRandomList();
         sort.insertionSort(insertion);
         printArray(insertion);
-        System.out.println("-------------Merge Sort------------");
+        System.out.println("-------------Merge search_sort.Sort------------");
         System.out.println(">> TODO <<");
-        System.out.println("-------------Quick Sort------------");
+        System.out.println("-------------Quick search_sort.Sort------------");
         int[] quick = sort.getRandomList();
         sort.quickSort(quick);
         printArray(quick);

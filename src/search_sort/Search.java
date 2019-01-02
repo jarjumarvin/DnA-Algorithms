@@ -1,20 +1,23 @@
+package search_sort;
+
 public class Search {
 
-    int[] getOrderedList(int n) {
+    public int[] getOrderedList(int n) {
         int[] r = new int[n];
         for(int i = 0; i < n; i++) {
             r[i] = i;
         }
         return r;
     }
-    int linearSearch(int[] A, int k) {
+
+    public int linearSearch(int[] A, int k) {
         for(int i = 0; i < A.length; i++) {
             if(A[i] == k) return i;
         }
         return -1;
     }
 
-    int binarySearch(int[] A, int k) {
+    public int binarySearch(int[] A, int k) {
         int l = 0;
         int r = A.length - 1;
         while(l <= r) {
@@ -26,7 +29,7 @@ public class Search {
         return -1;
     }
 
-    int interpolationSearch(int[] A, int k) {
+    public int interpolationSearch(int[] A, int k) {
         int l = 0;
         int r = A.length - 1;
 

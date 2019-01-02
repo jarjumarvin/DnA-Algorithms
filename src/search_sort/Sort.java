@@ -1,9 +1,11 @@
+package search_sort;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class Sort {
 
-    int[] getRandomList() {
+    public int[] getRandomList() {
         ArrayList<Integer> arr = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
             arr.add(i);
@@ -22,7 +24,7 @@ public class Sort {
         A[i] = t;
     }
 
-    void bubbleSort(int[] A) {
+    public void bubbleSort(int[] A) {
         for(int i = 0; i < A.length - 1; i++) {
             for(int j = 0; j < A.length - 1; j++) {
                 if(A[j] > A[j + 1]) {
@@ -32,7 +34,7 @@ public class Sort {
         }
     }
 
-    void selectionSort(int[] A) {
+    public void selectionSort(int[] A) {
         for(int i = 0; i < A.length - 1; i++) {
             int minPos = i;
             for (int j = i+1; j < A.length; j++) {
@@ -44,7 +46,7 @@ public class Sort {
         }
     }
 
-    void insertionSort(int[] A) {
+    public void insertionSort(int[] A) {
         for(int i = 1; i < A.length; i++) {
             int k = A[i];
             int j = i - 1;
@@ -56,7 +58,7 @@ public class Sort {
         }
     }
 
-    void heapSort(int[] A) {
+    public void heapSort(int[] A) {
         int n = A.length - 1;
 
         for(int i = n / 2; i >= 0; i--) {
@@ -69,7 +71,7 @@ public class Sort {
         }
     }
 
-    void heapify(int[] A, int i, int n) {
+    public void heapify(int[] A, int i, int n) {
         while(2*i+1 <= n) {
             int j = 2*i+1;
             if(j + 1 <= n && A[j] < A[j + 1]) j++;
@@ -80,11 +82,11 @@ public class Sort {
         }
     }
 
-    void mergeSort(int[] A) {
+    public void mergeSort(int[] A) {
         //TODO
     }
 
-    void quickSort(int[] A) {
+    public void quickSort(int[] A) {
         quickSort(A, 0, A.length - 1);
     }
 
