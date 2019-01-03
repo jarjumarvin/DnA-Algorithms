@@ -18,7 +18,9 @@
   - Boolean Array Dijkstra
   - Bellman Ford
   - Floyd Warshall
-- [Kruskal](./src/graph/MSTGraph.java) using [Union-Find Disjoin Set](./src/graph/DisjointSet.java) datastructure as per book
+- [Minimal Spanning Tree Algorithms](./src/graph/MSTGraph.java)
+  - Kruskal using [Union-Find Disjoin Set](./src/graph/DisjointSet.java) datastructure as per book
+  - Prim
 
 ### Graphs Used in Graph Algorithms as follows:
 <img src="https://i.imgur.com/jeBRELm.png" width="300"> <img src="https://i.imgur.com/ojX1jYg.png" width="200">
