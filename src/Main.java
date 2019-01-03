@@ -3,63 +3,67 @@ import graph.MSTGraph;
 import graph.PathFindingGraph;
 import search_sort.Search;
 import search_sort.Sort;
+import trees.AVLTree;
+import trees.BinaryTree;
+import trees.MultipleTree;
 
 public class Main {
     public static void main(String[] args) {
         searchAlgorithms();
         sortingAlgorithms();
         graphAlgorithms();
+        treeAlgorithms();
         System.out.println();
     }
 
     static void searchAlgorithms() {
-        System.out.println("=========search_sort.Search Algorithms=========");
+        System.out.println("===============Search Algorithms==============");
         Search search = new Search();
         int[] list = search.getOrderedList(50);
-        System.out.println("List: {0,....,49}");
-        System.out.println("search_sort.Search Values: {12, 15, 13, 2, 9, 27, 54, 37}");
+        System.out.println("Input: {0,....,49}");
+        System.out.println("Search Values: {12, 15, 13, 2, 9, 27, 54, 37}");
         int[] v = new int[] {12, 15, 13, 2, 9, 27, 54, 37};
-        System.out.println("-----------Linear search_sort.Search-----------");
+        System.out.println("----------------Linear Search------------------");
         for(int i : v) {
             System.out.print(search.linearSearch(list, i) + ", ");
         }
         System.out.println();
-        System.out.println("-----------Binary search_sort.Search-----------");
+        System.out.println("----------------Binary Search-----------------");
         for(int i : v) {
             System.out.print(search.binarySearch(list, i) + ", ");
         }
         System.out.println();
-        System.out.println("--------Interpolation search_sort.Search-------");
+        System.out.println("---------------Interpolation Search-----------");
         for(int i : v) {
             System.out.print(search.interpolationSearch(list, i) + ", ");
         }
         System.out.println();
-        System.out.println("===================================\n");
+        System.out.println("===============================================\n");
     }
 
     static void sortingAlgorithms() {
-        System.out.println("========Sorting Algorithms=========");
+        System.out.println("==============Sorting Algorithms===============");
         Sort sort = new Sort();
         System.out.println("Inputs: randomized arrays of length 20");
-        System.out.println("------------Bubble search_sort.Sort------------");
+        System.out.println("------------------Bubble Sort------------------");
         int[] bubble = sort.getRandomList();
         sort.bubbleSort(bubble);
         printArray(bubble);
-        System.out.println("-----------Selection search_sort.Sort----------");
+        System.out.println("-----------------Selection Sort----------------");
         int[] selection = sort.getRandomList();
         sort.selectionSort(selection);
         printArray(selection);
-        System.out.println("-----------Insertion search_sort.Sort----------");
+        System.out.println("-----------------Insertion Sort----------------");
         int[] insertion = sort.getRandomList();
         sort.insertionSort(insertion);
         printArray(insertion);
-        System.out.println("-------------Merge search_sort.Sort------------");
+        System.out.println("--------------------Merge Sort-----------------");
         System.out.println(">> TODO <<");
-        System.out.println("-------------Quick search_sort.Sort------------");
+        System.out.println("--------------------Quick Sort-----------------");
         int[] quick = sort.getRandomList();
         sort.quickSort(quick);
         printArray(quick);
-        System.out.println("===================================\n");
+        System.out.println("===============================================\n");
     }
 
     static void printArray(int[] A) {
@@ -70,17 +74,31 @@ public class Main {
     }
 
     static void graphAlgorithms() {
-        System.out.println("==========Graph Algorithms=========");
-        System.out.println("------------DFS and BFS------------ (simple.png)");
+        System.out.println("===============Graph Algorithms================");
+        System.out.println("-----------------DFS and BFS------- (simple.png)");
         DFSandBFS();
         System.out.println();
-        System.out.println("------------Path Finding----------- (path.png)");
+        System.out.println("-----------------Path Finding------- (path.png)");
         pathFinding();
         System.out.println();
-        System.out.println("---------------Kruskal------------- (path.png)");
+        System.out.println("--------------------Kruskal--------- (path.png)");
         mst();
-        System.out.println("===================================\n");
+        System.out.println("===============================================\n");
     }
+
+    static void treeAlgorithms() {
+        System.out.println("=============Tree Data Structures==============");
+        System.out.println("---------------Standard Binary Tree------------");
+        binaryTree();
+        System.out.println();
+        System.out.println("------------------Divisor Tree-----------------");
+        divisorTree();
+        System.out.println();
+        System.out.println("---------------------AVL Tree------------------");
+        avlTree();
+        System.out.println("===============================================\n");
+    }
+
 
     static void DFSandBFS() {
         // Simple Graph (unweighed) for BFS / DFS
@@ -152,4 +170,79 @@ public class Main {
         mst.BFS(0);
     }
 
+    static void binaryTree() {
+        BinaryTree tree = new BinaryTree();
+        System.out.println("Insert(1....20)");
+        for(int i = 1; i <= 20; i++) {
+            tree.insert(i);
+        }
+        System.out.println("Find(25) : " + tree.find(25));
+        System.out.println("Rank(14) : " + tree.rank(14));
+        System.out.println("Rank(16) : " + tree.rank(16));
+        System.out.println("Delete(15)");
+        tree.delete(15);
+        System.out.println("Rank(16) : " + tree.rank(16));
+        System.out.println("Delete(9)");
+        tree.delete(9);
+        System.out.println("Delete(12)");
+        tree.delete(12);
+        System.out.println("Rank(16) : " + tree.rank(16));
+        System.out.println("Find(9) : " + tree.find(9));
+    }
+
+    static void divisorTree() {
+        System.out.println("The divisor is 3. Ranges [a:b] are strict. Tree starts off with (1, 3, 7, 4, 5, 8, 6, 2)");
+        MultipleTree tree = new MultipleTree(3); // setting 3 as the divisor
+        tree.insert(1);
+        tree.insert(3);
+        tree.insert(7);
+        tree.insert(4);
+        tree.insert(5);
+        tree.insert(8);
+        tree.insert(6);
+        tree.insert(2);
+
+        System.out.println("TotalDivisors: " + tree.divisors());
+        System.out.println("Divisors in [2:5]: " + tree.divisorsBetween(2, 5));
+        System.out.println("Delete(3) => (1, 7, 4, 5, 8, 6, 2)");
+        tree.delete(3);
+        System.out.println("Divisors in [2:5]: " + tree.divisorsBetween(2, 5));
+        System.out.println("Insert(3) => (1, 3, 7, 4, 5, 8, 6, 2)");
+        tree.insert(3);
+        System.out.println("Divisors in [2:7]: " + tree.divisorsBetween(2, 7));
+        System.out.println("Divisors in [1: ]: " + tree.divisorsGreaterThan(1));
+        System.out.println("Insert(9) => (1, 3, 7, 4, 5, 8, 6, 9)");
+        tree.insert(9);
+        System.out.println("Divisors [1: ]:" + tree.divisorsGreaterThan(1));
+    }
+
+    static void avlTree() {
+        AVLTree tree = new AVLTree();
+        System.out.println("Ranges [a:b] are strict. Tree starts off with (1, 3, 7, 4, 5, 8, 6, 2)");
+        tree.insert(1);
+        tree.insert(3);
+        tree.insert(7);
+        tree.insert(4);
+        tree.insert(5);
+        tree.insert(8);
+        tree.insert(6);
+        tree.insert(2);
+
+        System.out.println("AVLCondition: " + tree.isAVL());
+        System.out.println("Select Smallest: " + tree.select(0).getVal());
+        System.out.println("Select Largest: " + tree.select(tree.size() - 1).getVal());
+        System.out.println("Nodes in [0:5], rank(5): " + tree.rank(5));
+        System.out.println("Contains 3: " + tree.contains(3));
+        System.out.println("delete(3) => (1, 7, 4, 5, 8, 6, 2)");
+        tree.delete(3);
+        System.out.println("Contains 3: " + tree.contains(3));
+        System.out.println("Nodes in [0:5], rank(5): " + tree.rank(5));
+        System.out.println("Height of node with value 7: " + tree.find(7).getHeight());
+        System.out.println("Nodes in [1:8]: " + tree.nodesBetween(1, 8));
+        System.out.println("insert(3) => (1, 3, 7, 4, 5, 8, 6, 2)");
+        tree.insert(3);
+        System.out.println("Nodes in [1:8]: " + tree.nodesBetween(1, 8));
+        System.out.println("AVLCondition: " + tree.isAVL());
+        System.out.println("isEmpty: " + tree.isEmpty());
+    }
 }
