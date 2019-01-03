@@ -9,10 +9,10 @@ import trees.MultipleTree;
 
 public class Main {
     public static void main(String[] args) {
-        searchAlgorithms();
-        sortingAlgorithms();
+//        searchAlgorithms();
+//        sortingAlgorithms();
         graphAlgorithms();
-        treeAlgorithms();
+//        treeAlgorithms();
         System.out.println();
     }
 
@@ -83,6 +83,10 @@ public class Main {
         System.out.println();
         System.out.println("--------------------Kruskal--------- (path.png)");
         mst();
+        System.out.println();
+        System.out.println("----------------------Prim---------- (path.png)");
+        prim();
+        System.out.println();
         System.out.println("===============================================\n");
     }
 
@@ -145,7 +149,6 @@ public class Main {
     }
 
     static void mst() {
-        //Graph that implements prims algorithm (for connected graphs)
         MSTGraph g = new MSTGraph(7);
         g.addUndirectedEdge(0, 1, 9);
         g.addUndirectedEdge(0, 4, 10);
@@ -159,6 +162,31 @@ public class Main {
         g.addUndirectedEdge(5, 3, 2);
 
         MSTGraph mst = g.kruskal();
+        System.out.println("Edges in the MST:");
+        int weight = 0;
+        for(Graph.Edge e : mst.edges) {
+            weight += e.weight;
+            System.out.println(e.source + " to " + e.target + ", weight: " + e.weight);
+        }
+        System.out.println("Total Weight: " + weight);
+        System.out.println("BFS traversal to check if connected: ");
+        mst.BFS(0);
+    }
+
+    static void prim() {
+        MSTGraph g = new MSTGraph(7);
+        g.addUndirectedEdge(0, 1, 9);
+        g.addUndirectedEdge(0, 4, 10);
+        g.addUndirectedEdge(1, 6, 8);
+        g.addUndirectedEdge(6, 4, 4);
+        g.addUndirectedEdge(1, 2, 7);
+        g.addUndirectedEdge(6,5,6);
+        g.addUndirectedEdge(4,5,5);
+        g.addUndirectedEdge(2, 3, 3);
+        g.addUndirectedEdge(2, 5, 1);
+        g.addUndirectedEdge(5, 3, 2);
+
+        MSTGraph mst = g.prim(0);
         System.out.println("Edges in the MST:");
         int weight = 0;
         for(Graph.Edge e : mst.edges) {

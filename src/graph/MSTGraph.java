@@ -35,4 +35,23 @@ public class MSTGraph extends Graph {
         }
         return g;
     }
+
+    public MSTGraph prim(int src) {
+        PriorityQueue<Edge> set = new PriorityQueue<>(Comparator.comparingInt(o -> o.weight));
+        boolean[] included = new boolean[n];
+        included[src] = true;
+        set.addAll(adj[src]);
+        MSTGraph g = new MSTGraph(n);
+        while(!set.isEmpty() || g.edges.size() != n - 1) {
+            Edge lowest = set.poll();
+            if(!included[lowest.target]) {
+                included[lowest.target] = true;
+                g.addEdge(lowest.source, lowest.target, lowest.weight);
+                for(Edge e : adj[lowest.target]) {
+                    if(!included[e.target]) set.add(e);
+                }
+            }
+        }
+        return g;
+    }
 }
