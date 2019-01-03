@@ -9,17 +9,17 @@ import trees.MultipleTree;
 
 public class Main {
     public static void main(String[] args) {
-//        searchAlgorithms();
-//        sortingAlgorithms();
+        searchAlgorithms();
+        sortingAlgorithms();
         graphAlgorithms();
-//        treeAlgorithms();
+        treeAlgorithms();
         System.out.println();
     }
 
     static void searchAlgorithms() {
         System.out.println("===============Search Algorithms==============");
         Search search = new Search();
-        int[] list = search.getOrderedList(50);
+        int[] list = ListUtil.getOrderedList(50);
         System.out.println("Input: {0,....,49}");
         System.out.println("Search Values: {12, 15, 13, 2, 9, 27, 54, 37}");
         int[] v = new int[] {12, 15, 13, 2, 9, 27, 54, 37};
@@ -46,21 +46,21 @@ public class Main {
         Sort sort = new Sort();
         System.out.println("Inputs: randomized arrays of length 20");
         System.out.println("------------------Bubble Sort------------------");
-        int[] bubble = sort.getRandomList();
+        int[] bubble = ListUtil.getRandomList();
         sort.bubbleSort(bubble);
         printArray(bubble);
         System.out.println("-----------------Selection Sort----------------");
-        int[] selection = sort.getRandomList();
+        int[] selection = ListUtil.getRandomList();
         sort.selectionSort(selection);
         printArray(selection);
         System.out.println("-----------------Insertion Sort----------------");
-        int[] insertion = sort.getRandomList();
+        int[] insertion = ListUtil.getRandomList();
         sort.insertionSort(insertion);
         printArray(insertion);
         System.out.println("--------------------Merge Sort-----------------");
         System.out.println(">> TODO <<");
         System.out.println("--------------------Quick Sort-----------------");
-        int[] quick = sort.getRandomList();
+        int[] quick = ListUtil.getRandomList();
         sort.quickSort(quick);
         printArray(quick);
         System.out.println("===============================================\n");

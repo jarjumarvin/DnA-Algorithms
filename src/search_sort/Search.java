@@ -2,14 +2,6 @@ package search_sort;
 
 public class Search {
 
-    public int[] getOrderedList(int n) {
-        int[] r = new int[n];
-        for(int i = 0; i < n; i++) {
-            r[i] = i;
-        }
-        return r;
-    }
-
     public int linearSearch(int[] A, int k) {
         for(int i = 0; i < A.length; i++) {
             if(A[i] == k) return i;

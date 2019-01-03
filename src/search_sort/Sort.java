@@ -1,24 +1,8 @@
 package search_sort;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
 public class Sort {
 
-    public int[] getRandomList() {
-        ArrayList<Integer> arr = new ArrayList<>();
-        for (int i = 0; i < 20; i++) {
-            arr.add(i);
-        }
-        Collections.shuffle(arr);
-        int[] list = new int[20];
-        for(int i = 0; i < 20; i++) {
-            list[i] = arr.get(i);
-        }
-        return list;
-    }
-
-    void swap(int[] A, int i, int j) {
+    private void swap(int[] A, int i, int j) {
         int t = A[j];
         A[j] = A[i];
         A[i] = t;
