@@ -10,7 +10,6 @@
 - Selection Sort
 - Insertion Sort
 - Quicksort
-- **TODO**: Merge Sort 
 
 ## Graph Structures and Algorithms
 - [DFS, BFS](./src/graph/Graph.java)
@@ -20,7 +19,6 @@
   - Bellman Ford
   - Floyd Warshall
 - [Kruskal](./src/graph/MSTGraph.java) using [Union-Find Disjoin Set](./src/graph/DisjointSet.java) datastructure as per book
-- **TODO**: Prim, Topological Sort, Graph Coloring
 
 ### Graphs Used in Graph Algorithms as follows:
 <img src="https://i.imgur.com/jeBRELm.png" width="300"> <img src="https://i.imgur.com/ojX1jYg.png" width="200">
@@ -30,7 +28,10 @@
 - [MultipleTree](./src/trees/MultipleTree.java) (can count number of divisors of a number k in the tree, as seen in DnA Homework)
 - [AVL Tree](./src/trees/AVLTree.java)
 
-## TODO: Dynamic Programming
-
-## Misc.
-- **TODO:** Min-Max Heap
+## TODO
+- Graph Algorithms
+  - Prim
+  - Topological Sort
+  - Graph Colouring
+- Min-Max Heap
+- Dynamic Programming
