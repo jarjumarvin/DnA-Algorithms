@@ -1,4 +1,4 @@
-# DnA-FS18 for the Böise (mostly for myself tbh)
+# DnA-FS18 for the Böise
 
 ## [Search Algorithms](./src/search_sort/Search.java)
 - Linear Search
