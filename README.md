@@ -9,6 +9,7 @@
 - Bubble Sort
 - Selection Sort
 - Insertion Sort
+- **TODO**: Merge Sort 
 - Quicksort
 
 ## Graph Structures and Algorithms
@@ -19,6 +20,7 @@
   - Bellman Ford
   - Floyd Warshall
 - [Kruskal](./src/graph/MSTGraph.java) using [Union-Find Disjoin Set](./src/graph/DisjointSet.java) datastructure as per book
+- - **TODO**: Prim
 
 ### Graphs Used in Graph Algorithms as follows:
 <img src="https://i.imgur.com/jeBRELm.png" width="300"> <img src="https://i.imgur.com/ojX1jYg.png" width="200">
