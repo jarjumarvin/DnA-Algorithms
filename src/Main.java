@@ -267,8 +267,13 @@ public class Main {
         System.out.println("Nodes in [0:5], rank(5): " + tree.rank(5));
         System.out.println("Height of node with value 7: " + tree.find(7).getHeight());
         System.out.println("Nodes in [1:8]: " + tree.nodesBetween(1, 8));
-        System.out.println("insert(3) => (1, 3, 7, 4, 5, 8, 6, 2)");
+        System.out.println("insert(3) twice => (1, 3(2), 7, 4, 5, 8, 6, 2)");
         tree.insert(3);
+        tree.insert(3);
+        System.out.println("multiplicity of 3: " + tree.multiplicity(3));
+        System.out.println("Nodes in [1:8]: " + tree.nodesBetween(1, 8));
+        System.out.println("delete(3) => (1, 3, 7, 4, 5, 8, 6, 2)");
+        tree.delete(3);
         System.out.println("Nodes in [1:8]: " + tree.nodesBetween(1, 8));
         System.out.println("AVLCondition: " + tree.isAVL());
         System.out.println("isEmpty: " + tree.isEmpty());

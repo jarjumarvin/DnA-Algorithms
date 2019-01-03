@@ -6,8 +6,12 @@ public class AVLTree {
     // Public functions
     public int size() { return root == null ? 0 : root.size; }
     public boolean isEmpty() { return (size() == 0); }
-    public boolean contains(int k) { return find(root, k) != null;}
+    public boolean contains(int k) { return find(root, k) != null; }
     public boolean isAVL() { return checkAVL(root); }
+    public int multiplicity(int k) {
+        Node n = find(k);
+        return n == null ? 0 : n.count;
+    }
 
     public int nodesBetween(int a, int b) {
         if(root == null) return 0;
@@ -21,7 +25,7 @@ public class AVLTree {
 
     public void insert(int k) { root = insert(root, k); }
     public void delete(int k) { root = delete(root, k); }
-    
+
     //Utility
     private int height(Node n) { return n == null ? -1 : n.height; }
     private int balanceFactor(Node n) { return height(n.left) - height(n.right); }
@@ -40,12 +44,6 @@ public class AVLTree {
         if (k < n.val) return rank(n.left, k); // val > k, ignore right subtree
         else if (k > n.val) return n.count + size(n.left) + rank(n.right, k); // val < k, return count + size of left and call rank on right subtree
         else return size(n.left); // val = k, size of left
-    }
-
-    private int countBetween(int a, int b) {
-        if(b <= a) throw new IllegalArgumentException("Invalid range.");
-        if(root == null) return 0;
-        return rank(root, b) - rank(root, a + 1);
     }
 
     private Node select(Node n, int k) { // return the node with the k'th largest value
@@ -172,11 +170,15 @@ public class AVLTree {
         if (n.val > k) n.left = delete(n.left, k); // Move to left Subtree
         else if (n.val < k) n.right = delete(n.right, k); // Move to right Subtree
         else { // Node find, perform recursive delete using inorder successor
-            if (n.left == null) return n.right;
-            else if (n.right == null) return n.left;
-            else {
-                n.val = successor(n.right); // lowest value in the right subtree
-                n.right = delete(n.right, n.val);
+            if(n.count > 1) { // Reduce multiplicity
+                n.count--;
+            } else {
+                if (n.left == null) return n.right;
+                else if (n.right == null) return n.left;
+                else {
+                    n.val = successor(n.right); // lowest value in the right subtree
+                    n.right = delete(n.right, n.val);
+                }
             }
         }
 
