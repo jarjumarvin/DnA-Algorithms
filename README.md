@@ -32,7 +32,6 @@
 
 ## TODO
 - Graph Algorithms
-  - Prim
   - Topological Sort
   - Graph Colouring
 - Min-Max Heap
