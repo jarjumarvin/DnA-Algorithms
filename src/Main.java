@@ -56,6 +56,10 @@ public class Main {
         int[] insertion = ListUtil.getRandomList();
         sort.insertionSort(insertion);
         printArray(insertion);
+        System.out.println("--------------------Heap Sort-----------------");
+        int[] heap = ListUtil.getRandomList();
+        sort.heapSort(heap);
+        printArray(heap);
         System.out.println("--------------------Merge Sort-----------------");
         int[] merge = ListUtil.getRandomList();
         sort.mergeSort(merge);
