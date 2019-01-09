@@ -9,6 +9,8 @@
 - Bubble Sort
 - Selection Sort
 - Insertion Sort
+- Heap Sort
+- Merge Sort
 - Quicksort
 
 ## Graph Structures and Algorithms
