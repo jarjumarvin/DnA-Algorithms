@@ -44,7 +44,6 @@ public class Sort {
 
     public void heapSort(int[] A) {
         int n = A.length - 1;
-
         for(int i = n / 2; i >= 0; i--) {
             heapify(A, i, n);
         }
@@ -66,9 +65,44 @@ public class Sort {
         }
     }
 
-    public void mergeSort(int[] A) {
-        //TODO
+    public void mergeSort(int[] a) {
+        int n = a.length;
+        if(n < 2) return; // empty array is sorted
+        int m = n / 2; // midpoint
+
+        // create subarrays
+        int[] left = new int[m];
+        int[] right = new int[n - m];
+        // copy into subarrays
+        for (int i = 0; i < m; i++) { left[i] = a[i]; }
+        for (int i = 0; i < n - m; i++) { right[i] = a[m + i]; }
+
+        mergeSort(left); // recur for left
+        mergeSort(right); // recur for right
+        merge(a, left, right, m, n - m); // merge
     }
+
+
+
+    void merge(int[] a, int[] left, int[] right, int l, int r) {
+        int i = 0; // index for left array
+        int j = 0; // index for right array
+        int k = 0; // current index to insert
+
+        while(i < l && j < r) { // traverse both arrays in parallel and insert elements in order
+            if(left[i] < right[j]) {
+                a[k++] = left[i++];
+            } else {
+                a[k++] = right[j++];
+            }
+        } // either both arrays have been copied, or one was longer than the other
+
+        // if left array was longer, keep inserting
+        while(i < l) { a[k++] = left[i++]; }
+        // if right array was longer, keep inserting
+        while(j < r) { a[k++] = right[j++]; }
+    }
+
 
     public void quickSort(int[] A) {
         quickSort(A, 0, A.length - 1);

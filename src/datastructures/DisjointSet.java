@@ -1,13 +1,13 @@
-package graph;
+package datastructures;
 
-class DisjointSet {
+public class DisjointSet {
     private int[] p;
     private int[] size;
     private int setCount = 0;
 
-    int getSetCount() { return setCount; }
+    public int getSetCount() { return setCount; }
 
-    void make(int n) {
+    public void make(int n) {
         p = new int[n];
         size = new int[n];
         this.setCount = n;
@@ -17,14 +17,14 @@ class DisjointSet {
         }
     }
 
-    int find(int a) {
+    public int find(int a) {
         while(p[a] != a) {
             a = p[a];
         }
         return a;
     }
 
-    void union(int a, int b) {
+    public void union(int a, int b) {
         int root_a = find(a);
         int root_b = find(b);
         if(size[root_a] < size[root_b]) {

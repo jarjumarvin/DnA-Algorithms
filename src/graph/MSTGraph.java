@@ -1,5 +1,7 @@
 package graph;
 
+import datastructures.DisjointSet;
+
 import java.util.Comparator;
 import java.util.PriorityQueue;
 

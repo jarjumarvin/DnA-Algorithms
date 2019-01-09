@@ -13,7 +13,6 @@ public class Main {
         sortingAlgorithms();
         graphAlgorithms();
         treeAlgorithms();
-        System.out.println();
     }
 
     static void searchAlgorithms() {
@@ -58,7 +57,9 @@ public class Main {
         sort.insertionSort(insertion);
         printArray(insertion);
         System.out.println("--------------------Merge Sort-----------------");
-        System.out.println(">> TODO <<");
+        int[] merge = ListUtil.getRandomList();
+        sort.mergeSort(merge);
+        printArray(merge);
         System.out.println("--------------------Quick Sort-----------------");
         int[] quick = ListUtil.getRandomList();
         sort.quickSort(quick);
