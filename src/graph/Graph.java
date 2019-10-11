@@ -3,9 +3,14 @@ package graph;
 import java.util.LinkedList;
 import java.util.Stack;
 
+/*
+ * 
+ * Basic Undirected (or Directed) Graph Implementation
+ * 
+*/
 public class Graph {
-    int n;
-    LinkedList<Edge>[] adj;
+    int n; // Number of Nodes
+    LinkedList<Edge>[] adj; // Adjacency List
 
     public Graph(int size) {
         n = size;
@@ -17,11 +22,11 @@ public class Graph {
 
     int size() { return n; }
 
-    public Edge addEdge(int u, int v) {
+    public Edge addEdge(int u, int v) { // Wrapper, adds weighed Edge
         return addEdge(u, v, 0);
     }
 
-    Edge addEdge(int u, int v, int w) {
+    Edge addEdge(int u, int v, int w) { // Adds weighed Edge
         Edge e = new Edge(u, v, w);
         adj[u].add(e);
         return e;
@@ -32,7 +37,7 @@ public class Graph {
         addEdge(v, u, w);
     }
 
-    void addUndirectedEdge(int u, int v) {
+    public void addUndirectedEdge(int u, int v) {
         addUndirectedEdge(u, v,0);
     }
 
@@ -45,45 +50,48 @@ public class Graph {
         return null;
     }
 
-    public void DFS(int src) {
+    public void DFS(int src) { // Depth First Search
+    	Stack<Integer> s = new Stack<Integer>();
         boolean[] visited = new boolean[n];
-        Stack<Integer> s = new Stack<>();
-        s.push(src);
+        
+    	s.push(src);
         visited[src] = true;
-        while(!s.isEmpty()) {
+        
+    	while(!s.isEmpty()) {
             int v = s.pop();
             System.out.print(v + " ");
-            for(Edge e : adj[v]) {
-                int neighbour = e.target;
-                if(!visited[neighbour]) {
-                    visited[neighbour] = true;
-                    s.push(neighbour);
-                }
-            }
-        }
-        System.out.println();
+            visited[v] = true;
+    		for(Edge e : adj[v]) {
+    			if(!visited[e.target]) {
+    				visited[e.target] = true;
+    				s.push(e.target);
+    			}
+    		}
+    	}
+    	System.out.println();
     }
-
-    public void BFS(int src) {
+    
+    public void BFS(int src) { // Breadth First Search
+    	LinkedList<Integer> l = new LinkedList<Integer>();
         boolean[] visited = new boolean[n];
-        LinkedList<Integer> q = new LinkedList<>();
-        q.push(src);
+        
+    	l.add(src);
         visited[src] = true;
-        while(!q.isEmpty()) {
-            int v = q.poll();
-            System.out.print(v + " ");
-            for(Edge e : adj[v]) {
-                int neighbour = e.target;
-                if(!visited[neighbour]) {
-                    visited[neighbour] = true;
-                    q.add(neighbour);
-                }
-            }
-        }
-        System.out.println();
+        
+    	while(!l.isEmpty()) {
+    		int v = l.poll();
+    		System.out.print(v + " ");
+    		visited[v] = true;
+    		for(Edge e : adj[v]) {
+    			if(!visited[e.target]) {
+    				visited[e.target] = true;
+    				l.add(e.target);
+    			}
+    		}
+    	}
+    	System.out.println();
     }
-
-    public static class Edge {
+    public static class Edge { // Internal Edge Class
         public int source, target, weight;
         Edge(int u, int v, int w) {
             this.source = u;

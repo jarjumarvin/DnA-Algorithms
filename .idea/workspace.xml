@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25a789fe-acd9-4d27-8b63-a418af57c52d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DnA-Algorithms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DnA-Algorithms.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ListUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ListUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graph/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graph/PathFindingGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graph/PathFindingGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/search_sort/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/search_sort/Sort.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,44 +62,56 @@
     <session id="1372473797">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
-          <entry key="project.open.time.10" value="1" />
+          <entry key="project.closed" value="26" />
+          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.134" value="1" />
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.20" value="3" />
+          <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.32" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.4" value="3" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="8352" />
+          <entry key="java" value="9467" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8352" />
+          <entry key="JAVA" value="9467" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="17" />
+          <entry key="java" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="17" />
+          <entry key="JAVA" value="35" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="58" column="52" selection-start-line="58" selection-start-column="52" selection-end-line="58" selection-end-column="52" />
+            <state relative-caret-position="342">
+              <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,20 +119,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/search_sort/Sort.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/graph/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="44" column="24" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ListUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+            <state relative-caret-position="472">
+              <caret line="88" column="31" lean-forward="true" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#374#375#0" expanded="true" />
+                <element signature="e#413#414#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,10 +150,12 @@
       <find>-</find>
       <find>edges</find>
       <find>g.</find>
+      <find>10</find>
     </findStrings>
     <replaceStrings>
       <replace>g.</replace>
       <replace>u.</replace>
+      <replace>9</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -156,7 +173,6 @@
         <option value="$PROJECT_DIR$/src/graph/PathFinding.java" />
         <option value="$PROJECT_DIR$/src/graph/SpanningTrees.java" />
         <option value="$PROJECT_DIR$/src/graph/Main.java" />
-        <option value="$PROJECT_DIR$/src/graph/Graph.java" />
         <option value="$PROJECT_DIR$/src/graph/PathFindingGraph.java" />
         <option value="$PROJECT_DIR$/src/Search.java" />
         <option value="$PROJECT_DIR$/src/Sort.java" />
@@ -176,6 +192,14 @@
         <option value="$PROJECT_DIR$/src/dynamic_programming/Knapsack.java" />
         <option value="$PROJECT_DIR$/src/search_sort/Sort.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/eprog/test/LinkedRingBufferTest.java" />
+        <option value="$PROJECT_DIR$/src/eprog/test/HardTimeout.java" />
+        <option value="$PROJECT_DIR$/src/eprog/LinkedRingBuffer.java" />
+        <option value="$PROJECT_DIR$/src/eprog/Node.java" />
+        <option value="$PROJECT_DIR$/src/eprog/test/LinkedRingBufferAGradingTest.java" />
+        <option value="$PROJECT_DIR$/src/eprog/test/LinkedRingBufferBGradingTest.java" />
+        <option value="$PROJECT_DIR$/src/anw/CustomAdjListGraph.java" />
+        <option value="$PROJECT_DIR$/src/graph/Graph.java" />
       </list>
     </option>
   </component>
@@ -185,28 +209,15 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1680" />
-    <option name="height" value="954" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="DnA-Algorithms" type="58d84e3e:PackageViewProjectNode" />
-              <item name="DnA-Algorithms" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -223,20 +234,40 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DnA-Algorithms" type="58d84e3e:PackageViewProjectNode" />
+              <item name="DnA-Algorithms" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547028109693" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552126289805" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/eprog/test" />
+      <recent name="$PROJECT_DIR$/src/eprog" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
     </key>
@@ -254,13 +285,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Main (1)">
-    <configuration name="DFSandBFS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="graph.DFSandBFS" />
-      <module name="DnA-Algorithms" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="DnA-Algorithms" />
@@ -281,40 +305,62 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PathFinding" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="graph.PathFinding" />
+    <configuration name="LinkedRingBufferAGradingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DnA-Algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="datastructures.*" />
+          <option name="PATTERN" value="eprog.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="eprog.test" />
+      <option name="MAIN_CLASS_NAME" value="eprog.test.LinkedRingBufferAGradingTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Search" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="search_sort.Search" />
+    <configuration name="LinkedRingBufferBGradingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DnA-Algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="eprog.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="eprog.test" />
+      <option name="MAIN_CLASS_NAME" value="eprog.test.LinkedRingBufferBGradingTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkedRingBufferTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DnA-Algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="eprog.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="eprog.test" />
+      <option name="MAIN_CLASS_NAME" value="eprog.test.LinkedRingBufferTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Search" />
-      <item itemvalue="Application.DFSandBFS" />
-      <item itemvalue="Application.PathFinding" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Main (1)" />
+      <item itemvalue="JUnit.LinkedRingBufferTest" />
+      <item itemvalue="JUnit.LinkedRingBufferAGradingTest" />
+      <item itemvalue="JUnit.LinkedRingBufferBGradingTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main (1)" />
+        <item itemvalue="JUnit.LinkedRingBufferBGradingTest" />
+        <item itemvalue="JUnit.LinkedRingBufferAGradingTest" />
+        <item itemvalue="JUnit.LinkedRingBufferTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.PathFinding" />
-        <item itemvalue="Application.DFSandBFS" />
-        <item itemvalue="Application.Search" />
       </list>
     </recent_temporary>
   </component>
@@ -334,18 +380,50 @@
       <workItem from="1546612951777" duration="45000" />
       <workItem from="1546877122280" duration="1341000" />
       <workItem from="1546960867843" duration="41000" />
-      <workItem from="1547027329453" duration="770000" />
+      <workItem from="1547027329453" duration="1071000" />
+      <workItem from="1547060192536" duration="272000" />
+      <workItem from="1547067621363" duration="369000" />
+      <workItem from="1547207141846" duration="248000" />
+      <workItem from="1547243775969" duration="440000" />
+      <workItem from="1547289477728" duration="80000" />
+      <workItem from="1548173588505" duration="28000" />
+      <workItem from="1548508670571" duration="483000" />
+      <workItem from="1548524132106" duration="48000" />
+      <workItem from="1548701742860" duration="66000" />
+      <workItem from="1548792258886" duration="237000" />
+      <workItem from="1550583442988" duration="314000" />
+      <workItem from="1550743276550" duration="2107000" />
+      <workItem from="1550755812411" duration="724000" />
+      <workItem from="1550774572305" duration="64000" />
+      <workItem from="1550775013666" duration="814000" />
+      <workItem from="1550785323819" duration="269000" />
+      <workItem from="1551173911608" duration="130000" />
+      <workItem from="1551546454520" duration="694000" />
+      <workItem from="1551717600169" duration="26000" />
+      <workItem from="1552046810121" duration="696000" />
+      <workItem from="1552122833377" duration="1103000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="LinkedRingBufferTest - 2019.02.21 at 19h 52m 08s.xml">
+      <configuration name="LinkedRingBufferTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedRingBufferAGradingTest - 2019.02.21 at 19h 54m 57s.xml">
+      <configuration name="LinkedRingBufferAGradingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedRingBufferBGradingTest - 2019.02.21 at 19h 56m 54s.xml">
+      <configuration name="LinkedRingBufferBGradingTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53427000" />
+    <option name="totallyTimeSpent" value="62940000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="954" extended-state="6" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.43223444" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2979243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -354,15 +432,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32948583" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4071856" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.43233532" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.40713537" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.432319" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.22875132" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32934132" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -381,18 +459,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/search_sort/Sort.java</url>
-          <line>81</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
@@ -415,13 +481,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/MaxHeap.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/LinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="340" column="19" selection-start-line="340" selection-start-column="19" selection-end-line="340" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/graph/DFSandBFS.java" />
     <entry file="file://$PROJECT_DIR$/src/graph/PathFinding.java" />
     <entry file="file://$PROJECT_DIR$/src/graph/SpanningTrees.java" />
@@ -429,13 +488,6 @@
     <entry file="file://$PROJECT_DIR$/src/graph/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/trees/BinarySearchTree.java" />
     <entry file="file://$PROJECT_DIR$/src/trees/Node.java" />
-    <entry file="file://$PROJECT_DIR$/src/graph/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="86" column="15" selection-start-line="86" selection-start-column="15" selection-end-line="86" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/trees/MultipleTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
@@ -464,20 +516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/trees/AVLTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="216" column="5" lean-forward="true" selection-start-line="216" selection-start-column="5" selection-end-line="216" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/graph/MSTGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/datastructures/DisjointSet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -486,20 +524,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/datastructures/BinaryHeap.java" />
-    <entry file="file://$PROJECT_DIR$/src/dynamic_programming/Knapsack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/search_sort/Sort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="44" column="24" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dynamic_programming/Knapsack.java" />
     <entry file="file://$PROJECT_DIR$/src/ListUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -507,12 +532,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/trees/AVLTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/search_sort/Sort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graph/MSTGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/eprog/test/LinkedRingBufferAGradingTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/eprog/Node.java" />
+    <entry file="file://$PROJECT_DIR$/src/eprog/test/HardTimeout.java" />
+    <entry file="file://$PROJECT_DIR$/src/eprog/test/LinkedRingBufferBGradingTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/eprog/test/LinkedRingBufferTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/eprog/LinkedRingBuffer.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19514">
+          <caret line="91" column="15" selection-start-line="91" selection-start-column="15" selection-end-line="91" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/anw/CustomAdjListGraph.java" />
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="58" column="52" selection-start-line="58" selection-start-column="52" selection-end-line="58" selection-end-column="52" />
+        <state relative-caret-position="342">
+          <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graph/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="88" column="31" lean-forward="true" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -523,6 +595,17 @@
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>

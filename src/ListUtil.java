@@ -12,12 +12,12 @@ class ListUtil {
 
     static int[] getRandomList() {
         ArrayList<Integer> arr = new ArrayList<>();
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 50; i++) {
             arr.add(i);
         }
         Collections.shuffle(arr);
-        int[] list = new int[20];
-        for(int i = 0; i < 20; i++) {
+        int[] list = new int[50];
+        for(int i = 0; i < 50; i++) {
             list[i] = arr.get(i);
         }
         return list;

@@ -5,6 +5,11 @@ import datastructures.DisjointSet;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+/*
+ * 
+ * Extension to Graph.java that implements Kruskal (using DisjointSet) and Prim MST Algorithms
+ * 
+ */
 public class MSTGraph extends Graph {
     public PriorityQueue<Edge> edges;
 

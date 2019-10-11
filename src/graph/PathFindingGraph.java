@@ -4,6 +4,16 @@ import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 
+/*
+ * 
+ * Extension to Graph.java that implements Path Finding Algorithms
+ * - Dijkstra
+ * -> Boolean Array
+ * -> Priority Queue
+ * 
+ * - Bellman Ford
+ * - Floyd Warshall
+ */
 public class PathFindingGraph extends Graph {
     static LinkedList<Edge> edges;
 
@@ -45,7 +55,7 @@ public class PathFindingGraph extends Graph {
         }
         return getDistance ? dist : parent;
     }
-
+    
     int[] priorityQueueDijkstra(int src, boolean getDistance) {
         int dist[] = new int[n];
         int parent[] = new int[n];

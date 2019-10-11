@@ -108,7 +108,6 @@ public class Main {
         System.out.println("===============================================\n");
     }
 
-
     static void DFSandBFS() {
         // Simple Graph (unweighed) for BFS / DFS
         Graph u = new Graph(7);

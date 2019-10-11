@@ -1,5 +1,16 @@
 package search_sort;
 
+/*
+ * 
+ * Basic Implementation of Sorting Algorithms
+ * 
+ * - Bubble
+ * - Selection, Insertion
+ * - HeapSort
+ * - MergeSort
+ * - QuickSort
+ * 
+*/
 public class Sort {
 
     private void swap(int[] A, int i, int j) {
@@ -41,12 +52,54 @@ public class Sort {
             A[j + 1] = k;
         }
     }
-
-    public void heapSort(int[] A) {
+    
+    public void buildHeap(int [] A) {
         int n = A.length - 1;
-        for(int i = n / 2; i >= 0; i--) {
+        for(int i = 0; i < n / 2; i++) {
             heapify(A, i, n);
         }
+    }
+    
+    public void BuildHeap(int [] A)
+	{
+		for (int i = (A.length/2) + 1; i >= 0; i--)
+		{
+			int j = 2*i + 1;
+	
+			while (j < A.length)
+			{
+
+				if (A[j] > A[i]) {
+					int temp = A[i];
+					A[i] = A[j];
+					A[j] = temp;
+					i = j;
+					j = 2*i + 1;
+				}
+				else if (j < A.length-1 && A[i] < A[j+1]) {
+					int temp = A[i];
+					A[i] = A[j+1];
+					A[j+1] = temp;
+					i = j + 1;
+					j = 2*i + 1;
+				}
+				else break;
+			}
+		}
+	}
+    
+    public boolean checkHeapCondition(int[] arr) {
+        int N = arr.length;
+        for (int i = (N - 2) / 2; i > 0; --i) { // start from the first internal node who has children;
+            int j = 2 * i + 1; // the left child;
+            if (j < N - 1 && arr[i] < arr[j+1]) j++; // select the bigger child;
+            if (arr[i] < arr[j]) return false; // if parent is smaller than the child;
+        }
+        return true;
+    }
+    public void heapSort(int[] A) {
+        int n = A.length - 1;
+        BuildHeap(A);
         for(int i = n; i > 0; i--) {
             swap(A, 0, i);
             n--;

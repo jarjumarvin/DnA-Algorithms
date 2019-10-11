@@ -1,5 +1,13 @@
 package search_sort;
 
+/*
+ * 
+ * Basic Implementation of Search Algorithms
+ * - linear
+ * - binary
+ * - interpolation
+ * 
+*/
 public class Search {
 
     public int linearSearch(int[] A, int k) {

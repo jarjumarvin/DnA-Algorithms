@@ -1,5 +1,10 @@
 package trees;
 
+/*
+ * 
+ * Basic Binary Search Tree Implementation
+ * 
+*/
 public class BinaryTree {
     private Node root;
 

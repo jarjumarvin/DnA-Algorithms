@@ -1,5 +1,10 @@
 package trees;
 
+/*
+ * 
+ * My Implementation of a balanced AVL Tree
+ * 
+*/
 public class AVLTree {
     private Node root;
 

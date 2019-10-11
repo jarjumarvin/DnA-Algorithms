@@ -1,5 +1,10 @@
 package trees;
-
+/*
+ * 
+ * Special Implementation of a Search Tree that allows to return the number of nodes that divide a given number in O(1). 
+ * This Implementation was based on an Excercise Sheet
+ * 
+*/
 public class MultipleTree {
     private Node root;
     private int d;

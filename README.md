@@ -1,4 +1,4 @@
-# DnA-FS18 for the Böise
+# ETH DnA Algorithm Collection FS2018
 
 ## [Search Algorithms](./src/search_sort/Search.java)
 - Linear Search
