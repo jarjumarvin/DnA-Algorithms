@@ -9,6 +9,8 @@
 - Bubble Sort
 - Selection Sort
 - Insertion Sort
+- Heap Sort
+- Merge Sort
 - Quicksort
 
 ## Graph Structures and Algorithms
@@ -19,7 +21,7 @@
   - Bellman Ford
   - Floyd Warshall
 - [Minimal Spanning Tree Algorithms](./src/graph/MSTGraph.java)
-  - Kruskal using [Union-Find Disjoin Set](./src/graph/DisjointSet.java) datastructure as per book
+  - Kruskal using [Union-Find Disjoin Set](./src/datastructures/DisjointSet.java) datastructure as per book
   - Prim
 
 ### Graphs Used in Graph Algorithms as follows:
