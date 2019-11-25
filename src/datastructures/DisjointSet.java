@@ -7,7 +7,7 @@ public class DisjointSet {
 
     public int getSetCount() { return setCount; }
 
-    public void make(int n) {
+    public void make(int n) { // Creates a Disjoint Set data structure with n sets
         p = new int[n];
         size = new int[n];
         this.setCount = n;
@@ -17,14 +17,14 @@ public class DisjointSet {
         }
     }
 
-    public int find(int a) {
+    public int find(int a) { // finds the root of the tree beloning to a
         while(p[a] != a) {
             a = p[a];
         }
         return a;
     }
 
-    public void union(int a, int b) {
+    public void union(int a, int b) { // combines two sets into one, appends the smaller tree to the larger
         int root_a = find(a);
         int root_b = find(b);
         if(size[root_a] < size[root_b]) {

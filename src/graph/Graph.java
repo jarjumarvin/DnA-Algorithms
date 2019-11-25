@@ -12,8 +12,10 @@ public class Graph {
     int n; // Number of Nodes
     LinkedList<Edge>[] adj; // Adjacency List
 
-    public Graph(int size) {
+    public Graph(int size) { // constructor for a Graph with `size` nodes
         n = size;
+        
+        // initialise adjacency list
         adj = new LinkedList[n];
         for(int i = 0; i < n; i++) {
             adj[i] = new LinkedList<>();
@@ -22,7 +24,7 @@ public class Graph {
 
     int size() { return n; }
 
-    public Edge addEdge(int u, int v) { // Wrapper, adds weighed Edge
+    public Edge addEdge(int u, int v) { // Wrapper, adds unweighed Edge in one direction
         return addEdge(u, v, 0);
     }
 
@@ -32,12 +34,12 @@ public class Graph {
         return e;
     }
 
-    public void addUndirectedEdge(int u, int v, int w) {
+    public void addUndirectedEdge(int u, int v, int w) { // Adds two unweighed edges in both directions
         addEdge(u, v, w);
         addEdge(v, u, w);
     }
 
-    public void addUndirectedEdge(int u, int v) {
+    public void addUndirectedEdge(int u, int v) { // adds an undirected edge between `u` and `v`
         addUndirectedEdge(u, v,0);
     }
 
@@ -51,19 +53,18 @@ public class Graph {
     }
 
     public void DFS(int src) { // Depth First Search
-    	Stack<Integer> s = new Stack<Integer>();
-        boolean[] visited = new boolean[n];
+    	Stack<Integer> s = new Stack<Integer>(); // initialise stack
+        boolean[] visited = new boolean[n]; // initialise boolean array
         
-    	s.push(src);
-        visited[src] = true;
+    	s.push(src); // add source to the stack
+        visited[src] = true; // set source to visited
         
     	while(!s.isEmpty()) {
             int v = s.pop();
-            System.out.print(v + " ");
-            visited[v] = true;
-    		for(Edge e : adj[v]) {
+            System.out.print(v + " "); 
+
+    		for(Edge e : adj[v]) { // add unvisited neighbours of v to the stack
     			if(!visited[e.target]) {
-    				visited[e.target] = true;
     				s.push(e.target);
     			}
     		}
@@ -72,19 +73,20 @@ public class Graph {
     }
     
     public void BFS(int src) { // Breadth First Search
-    	LinkedList<Integer> l = new LinkedList<Integer>();
-        boolean[] visited = new boolean[n];
+    	LinkedList<Integer> l = new LinkedList<Integer>(); // initialise FIFO-Queue
+        boolean[] visited = new boolean[n]; // initialise boolean array
         
-    	l.add(src);
+    	l.add(src); // add source to the list
         visited[src] = true;
         
-    	while(!l.isEmpty()) {
-    		int v = l.poll();
-    		System.out.print(v + " ");
-    		visited[v] = true;
-    		for(Edge e : adj[v]) {
+        while(!l.isEmpty()) {
+
+    		int v = l.poll(); // pop oldest vertex off stack
+            System.out.print(v + " ");
+                        
+    		for(Edge e : adj[v]) { // add unvisited neighbours of v to the list
     			if(!visited[e.target]) {
-    				visited[e.target] = true;
+                    visited[e.target] = true;
     				l.add(e.target);
     			}
     		}

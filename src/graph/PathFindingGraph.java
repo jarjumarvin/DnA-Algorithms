@@ -32,16 +32,20 @@ public class PathFindingGraph extends Graph {
         return e;
     }
 
-    int[] booleanArrayDijkstra(int src, boolean getDistance) {
-        int dist[] = new int[n];
-        int parent[] = new int[n];
-        boolean[] visited = new boolean[n];
-        for(int i = 0; i < n; i++) {
+    // boolean array implementation of dijkstras algorithm
+    int[] booleanArrayDijkstra(int src, boolean getDistance) { // returns the distance array if getDistance is true, otherwise the parent array
+        int dist[] = new int[n]; // int array containing the distance from src to any node
+        int parent[] = new int[n]; // int array containing the parents on shortest paths originating from src
+        boolean[] visited = new boolean[n]; // boolean array
+
+        for(int i = 0; i < n; i++) { // initialise the three arrays, parent = -1 means there is no path
             dist[i] = Integer.MAX_VALUE;
             parent[i] = -1;
             visited[i] = false;
         }
-        dist[src] = 0;
+
+        dist[src] = 0; // src has distance 0
+
         for(int i = 0; i < n - 1; i++) {
             int u = minDist(dist, visited);
             visited[u] = true;
